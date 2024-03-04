@@ -131,7 +131,7 @@ fun ListScreen() {
 
     ScreenScaffold(scrollState = columnState) {
         /*
-         * Using the Horologist [ScalingLazyColumn] here takes care of the horizontal and vertical
+         * The Horologist [ScalingLazyColumn] takes care of the horizontal and vertical
          * padding for the list, so there is no need to specify it, as in the [GreetingScreen]
          * composable.
          */
