@@ -23,6 +23,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -59,8 +60,7 @@ import com.google.android.horologist.compose.rotaryinput.rotaryWithScroll
 /**
  * Simple "Hello, World" app meant as a starting point for a new project using Compose for Wear OS.
  *
- * Displays only a centered [Text] composable, and the actual text varies based on the shape of the
- * device (round vs. square/rectangular).
+ * Displays a centered [Text] composable and a list.
  *
  * Use the Wear version of Compose Navigation. You can carry
  * over your knowledge from mobile and it supports the swipe-to-dismiss gesture (Wear OS's
