@@ -35,6 +35,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.wear.compose.foundation.ExperimentalWearFoundationApi
@@ -59,6 +60,7 @@ import com.google.android.horologist.compose.layout.rememberResponsiveColumnStat
 import com.google.android.horologist.compose.material.AlertContent
 import com.google.android.horologist.compose.material.Button
 import com.google.android.horologist.compose.material.Chip
+import com.google.android.horologist.compose.material.ListHeaderDefaults
 import com.google.android.horologist.compose.material.ListHeaderDefaults.firstItemPadding
 import com.google.android.horologist.compose.material.ResponsiveListHeader
 import com.google.android.horologist.compose.rotaryinput.rotaryWithScroll
@@ -156,10 +158,31 @@ fun ListScreen() {
         ScalingLazyColumn(
             columnState = columnState
         ) {
+//            item {
+//                ResponsiveListHeader(contentPadding = firstItemPadding()) {
+//                    Text(text = "Header")
+//                }
+//            }
             item {
-                ResponsiveListHeader(contentPadding = firstItemPadding()) {
-                    Text(text = "Header")
+                ResponsiveListHeader(
+                    contentColor = Color.White,
+                    contentPadding = ListHeaderDefaults.firstItemPadding()
+                ) {
+                    Text(
+                        modifier = Modifier.fillMaxWidth(),
+                        textAlign = TextAlign.Center,
+                        text = "Header"
+                    )
                 }
+            }
+
+            item {
+                Text(
+                    modifier = Modifier.fillMaxWidth(),
+                    color = Color.White,
+                    textAlign = TextAlign.Center,
+                    text = "Header"
+                )
             }
             item {
                 TitleCard(title = { Text("Example Title") }, onClick = { }) {
